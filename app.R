@@ -178,7 +178,7 @@ server <- function(input, output) {
                 detach(scores)
                 sorted <-(head(sorted, 21))
                 json <- toJSON(sorted)
-                write(json, paste('recommended_songs-', input$Artist, '.json'))
+                write_json(json, file)
             }
         }
     )
